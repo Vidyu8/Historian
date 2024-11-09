@@ -36,7 +36,7 @@ function App() {
                 <Route path="/quiz2" element={<Quiz2 />} />
                 <Route path="/quiz3" element={<Quiz3 />} />
                 <Route path="/quiz4" element={<Quiz4 />} />
-                <Route path="/darkhistory" element={<Darkhistory />} />
+                <Route path="/darkhistory" element={<DarkMoments />} />
                 <Route path="/mystery" element={<Mystery />} />
                 <Route path="/mytho" element={<Mythology />} />
                 <Route path="/about" element={<About />} />
