@@ -8,7 +8,7 @@
 /* Global styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('mainbg.jpg');
+    background-image: url('https://i.pinimg.com/736x/37/51/00/3751007307601c988e581d7d546d820b.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -83,7 +83,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('history-bg.jpg');
+    background-image: url('https://i.pinimg.com/736x/37/51/00/3751007307601c988e581d7d546d820b.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
