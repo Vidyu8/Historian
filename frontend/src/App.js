@@ -38,7 +38,7 @@ function App() {
                 <Route path="/quiz4" element={<Quiz4 />} />
                 <Route path="/darkhistory" element={<DarkMoments />} />
                 <Route path="/mystery" element={<Mystery />} />
-                <Route path="/mytho" element={<Mythology />} />
+                <Route path="/mytho" element={<Mytho />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
