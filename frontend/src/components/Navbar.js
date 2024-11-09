@@ -5,12 +5,12 @@ function Navbar() {
     return (
         <nav>
             <Link to="/">Home</Link>
-            <Link to="/History">History</Link>
-            <Link to="/Quizzes">Quizzes</Link>
-            <Link to="/DarkMoments">Dark history</Link>
-            <Link to="/Mysteries">Unsolved mysteries</Link>
-            <Link to="/Aboutus">About Us</Link>
-            <Link to="Contactus">Contact Us</Link>
+            <Link to="/history">History</Link>
+            <Link to="/quizzes">Quizzes</Link>
+            <Link to="/darkhistory">Dark history</Link>
+            <Link to="/mysteries">Unsolved mysteries</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="contact">Contact Us</Link>
         </nav>
     );
 }
