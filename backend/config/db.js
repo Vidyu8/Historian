@@ -1,8 +1,4 @@
-// backend/config/db.js
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-
-dotenv.config();
 
 const connectDB = async () => {
     try {
@@ -11,9 +7,9 @@ const connectDB = async () => {
             useUnifiedTopology: true,
         });
         console.log('MongoDB connected');
-    } catch (error) {
-        console.error('Database connection failed:', error);
-        process.exit(1); // Stop the app if DB connection fails
+    } catch (err) {
+        console.error('MongoDB connection error:', err.message);
+        process.exit(1); // Exit process if connection fails
     }
 };
 
