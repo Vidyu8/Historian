@@ -68,22 +68,6 @@ const Footer = () => (
 
 const Home = () => {
   return (
-    <div>
-      <header>
-        <h1>Interactive History</h1>
-        <p>Discover History by Area, Region, Ethnicity, and More!</p>
-        <SearchBar />
-      </header>
-
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/history">History</Link>
-        <Link to="/myths">Myth Debunking</Link>
-        <Link to="/quizzes">Quizzes</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/contact">Contact Us</Link>
-      </nav>
-
       <HeroSection />
       <QuizzesSection />
       <CategoriesSection />
