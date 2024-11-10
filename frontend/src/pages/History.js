@@ -26,8 +26,9 @@ const History = () => {
           {/* Regions Link */}
           <div className="category-card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/1/10/World_map_600px.png" // Sample image for Regions
+              src="https://img.freepik.com/premium-photo/wooden-world-map-with-rustic-vintage-feel-map-is-dark-brown-color-with-countries-oceans-lighter-brown_1209158-26753.jpg" // Sample image for Regions
               alt="Regions"
+              style={{ width: '100%', maxWidth: '351px', height: '300px' }}
               className="category-image"
             />
             <h3>Regions</h3>
@@ -38,7 +39,7 @@ const History = () => {
           {/* Ethnicities Link */}
           <div className="category-card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Flags_of_the_world.svg" // Sample image for Ethnicities
+              src="https://americanindianrepublic.com/wp-content/uploads/2021/10/native-americans-are-not-all-the-same-an-exploration-of-indigenous-diversity.jpg" // Sample image for Ethnicities
               alt="Ethnicities"
               className="category-image"
             />
@@ -50,8 +51,9 @@ const History = () => {
           {/* Myth Debunking Link */}
           <div className="category-card">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/99/Debunking_Myths.jpg" // Sample image for Myth Debunking
+              src="https://img.thread-bare.com/store/thread-bare/ZeTzagXO/bcCPtGWG.mockup" // Sample image for Myth Debunking
               alt="Myth Debunking"
+              style={{ width: '100%', maxWidth: '351px', height: '300px' }}
               className="category-image"
             />
             <h3>Myth Debunking</h3>

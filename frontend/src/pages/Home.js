@@ -11,7 +11,7 @@ const SearchBar = () => (
 
 const HeroSection = () => (
   <section className="hero">
-    <h1>Explore the Rich Tapestry of World History</h1>
+    <h1>Explore the Tapestry of World History</h1>
     <p>From ancient civilizations to modern movements, uncover the stories that shaped our world.</p>
     <button onClick={() => window.location.href = '/history'}>Get Started</button>
   </section>
@@ -29,35 +29,16 @@ const QuizzesSection = () => (
   </section>
 );
 
-const CategoriesSection = () => (
-  <section className="categories">
-    <h2>Explore by Category</h2>
-    <div className="category-grid">
-      <CategoryCard
-        title="Regions"
-        description="Delve into the historical milestones of different regions across the globe."
-        link="/Regions"
-      />
-      <CategoryCard
-        title="Ethnicities"
-        description="Discover the impact and contributions of various ethnic groups throughout history."
-        link="/Ethnicities"
-      />
-      <CategoryCard
-        title="Myth Debunking"
-        description="Separate historical facts from fiction and bust popular myths."
-        link="/Myths"
-      />
-    </div>
+const DarkHistory = () => (
+  <section className="darkhistory">
+    <img
+      src="https://cdn.britannica.com/62/161062-050-10A574C5/town-crier-families-victims-Black-Death-mass.jpg"
+      alt="Dark history"
+    />
+    <h2>To the Dark Side</h2>
+    <p>Find out more about humanity's darkest moments, from the holocaust to Agent Orange</p>
+    <button onClick={() => window.location.href = '/darkhistory'}>Cross into the dark side</button>
   </section>
-);
-
-const CategoryCard = ({ title, description, link }) => (
-  <div className="category-card">
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <Link to={link}>Explore {title}</Link>
-  </div>
 );
 
 const Footer = () => (
@@ -70,8 +51,8 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
+      <DarkHistory/>
       <QuizzesSection />
-      <CategoriesSection />
       <Footer />
     </div>
   );

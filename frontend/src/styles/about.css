@@ -1,0 +1,55 @@
+.about-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-main {
+    max-width: 800px;
+    margin: auto;
+}
+
+#about-content {
+    text-align: center; /* Center align text */
+    padding: 20px;
+}
+
+.about-container h2 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.team-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.team-list li {
+    font-size: 1.2em;
+    color: #05121f; /* Bootstrap primary color */
+    margin: 5px 0;
+}
+
+.learn-more-button {
+    background-color: #051322; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: #91beed; /* Darker shade for hover effect */
+}
+

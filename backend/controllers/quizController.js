@@ -1,13 +1,19 @@
 // backend/controllers/quizController.js
 const Quiz = require('../models/Quiz');
 
-// Controller function to get all quizzes
 const getAllQuizzes = async (req, res) => {
     try {
         const quizzes = await Quiz.find();
+        
+        // If no quizzes are found
+        if (!quizzes || quizzes.length === 0) {
+            return res.status(404).json({ message: 'No quizzes found' });
+        }
+
         res.status(200).json(quizzes);
     } catch (error) {
-        res.status(500).json({ message: 'Failed to retrieve quizzes' });
+        console.error('Error fetching quizzes:', error);
+        res.status(500).json({ message: 'Failed to retrieve quizzes', error: error.message });
     }
 };
 

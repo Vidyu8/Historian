@@ -6,6 +6,7 @@
 }
 
 /* Global styles */
+/*
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('https://i.pinimg.com/736x/37/51/00/3751007307601c988e581d7d546d820b.jpg');
@@ -22,14 +23,44 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.1);
+}*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    position: relative; /* Required for absolute positioning of the pseudo-element */
+
+}
+
+body::before {
+    content: '';
+    position: fixed;/* Use fixed to keep it in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/736x/37/51/00/3751007307601c988e581d7d546d820b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px); /* Adjust the blur amount here */
+    z-index: -1; /* Ensure it is behind the content */
+    opacity: 1; /* Ensure the pseudo-element is fully opaque */
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Use an overlay for additional effect */
+    z-index: -1; /* Ensure it is behind the content */
 }
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #ffafaf;
+    background-color: #251c1c;
+    color: #fbfbfb;
     padding: 20px;
     text-align: center;
 }
@@ -50,7 +81,7 @@ header {
 .search-bar button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #b55430;
+    background-color: #e6ae2c;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -64,7 +95,7 @@ header {
 
 /* Navbar styles */
 nav {
-    background-color: #444;
+    background-color: #251c1c;
     text-align: center;
     padding: 15px 0;
 }
@@ -83,9 +114,6 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://i.pinimg.com/736x/37/51/00/3751007307601c988e581d7d546d820b.jpg');
-    background-size: cover;
-    background-position: center;
     padding: 100px 20px;
     text-align: center;
     color: #0c0404;
@@ -127,7 +155,7 @@ nav a:hover {
 }
 
 .quizzes img {
-    width: 300px;
+    width: 500px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -158,6 +186,51 @@ nav a:hover {
 .quizzes button:hover {
     background-color: #bc4910;
 }
+
+.darkhistory {
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkhistory img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.darkhistory h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.darkhistory p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.darkhistory button {
+    padding: 15px 30px;
+    background-color: #6b2d17;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.darkhistory button:hover {
+    background-color: #bc4910;
+}
+
 
 /* Categories Section */
 .categories {
@@ -212,8 +285,8 @@ nav a:hover {
 
 /* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #0e0303;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     position: fixed;
