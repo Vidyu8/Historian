@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'; // Importing Link for navigation
 
 // Reusable components
@@ -36,17 +36,17 @@ const CategoriesSection = () => (
       <CategoryCard
         title="Regions"
         description="Delve into the historical milestones of different regions across the globe."
-        link="/region"
+        link="/Regions"
       />
       <CategoryCard
         title="Ethnicities"
         description="Discover the impact and contributions of various ethnic groups throughout history."
-        link="/ethnicity"
+        link="/Ethnicities"
       />
       <CategoryCard
         title="Myth Debunking"
         description="Separate historical facts from fiction and bust popular myths."
-        link="/myths"
+        link="/Myths"
       />
     </div>
   </section>
@@ -68,6 +68,7 @@ const Footer = () => (
 
 const Home = () => {
   return (
+    <div>
       <HeroSection />
       <QuizzesSection />
       <CategoriesSection />
@@ -77,4 +78,3 @@ const Home = () => {
 };
 
 export default Home;
- 

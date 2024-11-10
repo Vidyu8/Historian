@@ -10,7 +10,7 @@ function Navbar() {
             <Link to="/darkhistory">Dark history</Link>
             <Link to="/mysteries">Unsolved mysteries</Link>
             <Link to="/about">About Us</Link>
-            <Link to="contact">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
         </nav>
     );
 }

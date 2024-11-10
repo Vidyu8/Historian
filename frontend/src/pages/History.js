@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // For navigation to other pages
-import './styles/history.css'; // Assuming you have a separate CSS file for this page
+import '../styles/history.css'; // Assuming you have a separate CSS file for this page
 
 const History = () => {
   return (
