@@ -5,16 +5,14 @@ import '../styles/history.css'; // Assuming you have a separate CSS file for thi
 const History = () => {
   return (
     <div className="history-page">
-      <header className="history-header">
-        <h1>Explore the History of the World</h1>
-        <p>Discover key moments, regions, ethnicities, and myths that shaped our past.</p>
-      </header>
 
       {/* Introduction Section */}
       <section className="intro">
-        <h2>Welcome to the History Portal</h2>
+        <h2>Welcome to the Historian</h2>
         <p>
           History is a vast early warning system, providing us with insights and lessons that help shape our future.
+          From wars to rebellions, empires to civilizations, history and how it's told impact not just tthe way we think, but also the way we act. 
+          At a time when misinformation and inconsistencies are at an all time high, we believe in bringing the truth as it's written, not as it's interpreted. 
           Whether you’re interested in ancient civilizations, regional histories, or debunking popular myths, you’ll find a treasure trove of knowledge here.
         </p>
       </section>

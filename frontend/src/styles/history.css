@@ -25,6 +25,8 @@
 .intro {
   text-align: center;
   padding: 40px 20px;
+  color: #000000;
+  font-weight:bold;
 }
 
 .intro h2 {
@@ -58,7 +60,7 @@
 
 .category-card {
   width: 30%;
-  background-color: #742e14;
+  background-color: #90492f;
   color:#fff;
   padding: 20px;
   border-radius: 10px;

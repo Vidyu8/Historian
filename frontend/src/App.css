@@ -29,7 +29,7 @@ body {
 body {
     font-family: 'Arial', sans-serif;
     position: relative; /* Required for absolute positioning of the pseudo-element */
-
+    color:#000000
 }
 
 body::before {
@@ -39,11 +39,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://i.pinimg.com/736x/37/51/00/3751007307601c988e581d7d546d820b.jpg');
+    background-image: url('https://i.pinimg.com/736x/8a/d2/e7/8ad2e768f90da7fdbf26e4497dd7993f.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(4px); /* Adjust the blur amount here */
+    filter: blur(1px); /* Adjust the blur amount here */
     z-index: -1; /* Ensure it is behind the content */
     opacity: 1; /* Ensure the pseudo-element is fully opaque */
 }
@@ -152,6 +152,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .quizzes img {
