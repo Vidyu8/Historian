@@ -2,6 +2,9 @@ import React from 'react';
 import '../styles/about.css'; // Import the CSS file for styling
 
 const About = () => {
+    const handleLearnMoreClick = () => {
+        window.location.href = '/contact';
+    }
     return (
         <div className="about-container">
             <main className="about-main">
@@ -16,7 +19,7 @@ const About = () => {
                         <li>Vidisha</li>
                         <li>Vipaanchi</li>
                     </ul>
-                    <button className="learn-more-button">Learn More</button>
+                    <button className="learn-more-button" onClick={handleLearnMoreClick}>Learn More</button>
                 </section>
             </main>
 

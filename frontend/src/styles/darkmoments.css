@@ -1,0 +1,134 @@
+.dark-history-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto; /* Centers the container */
+    max-width: 800px;
+    padding: 0;
+    color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Header for Dark History */
+  .dark-history-container h1 {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-size: 3rem;
+    color: #080404;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .dark-history-container p {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    color: #100a0a;
+    font-weight: bold;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+  
+  /* Section Style */
+  .section {
+    background-color: #5D4037; /* Dark background for sections */
+    color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+  }
+  
+  .section h2 {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #F5F5DC; /* Light orange color for section titles */
+    cursor: pointer;
+  }
+  
+  .section h3 {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #f0c9bb; /* Light orange color for section titles */
+  }
+  
+  .section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  /* Initially hide the content */
+  .section .section-content {
+    display: none; /* Content hidden by default */
+    padding-top: 10px;
+  }
+  
+  /* Content visibility when active */
+  .section.active .section-content {
+    display: block; /* Show content when the section is active */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+  }
+  
+  .section img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block; /* Makes the image a block element */
+    margin-left: auto;
+    margin-right: auto; /* Centers the image horizontally */
+  }
+  
+  /* Hover effects for sections */
+  .section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .section h2:hover {
+    color: #e0a88f; /* Slightly darker orange for hover effect */
+  }
+  
+  /* Introductory text block */
+  .intro {
+    text-align: center;
+    padding: 40px 20px;
+    color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6347;
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: #ddd;
+  }
+  
+  /* Footer for the page (optional, if needed) */
+  .history-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  

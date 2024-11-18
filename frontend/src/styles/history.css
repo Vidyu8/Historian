@@ -1,114 +1,108 @@
-/* history.css */
+/* General Page Styling */
 .history-page {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('https://i.pinimg.com/736x/c8/9a/6f/c89a6f1869b13978450b179d4b5c768a.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 60px; /* Space for footer */
 }
 
-.history-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.history-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.history-header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
+/* Introduction Section */
 .intro {
+  
   text-align: center;
-  padding: 40px 20px;
-  color: #000000;
-  font-weight:bold;
+  color: #fff;
+  padding: 50px 20px;
 }
 
-.intro h2 {
-  font-size: 2rem;
+.intro-title {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.intro p {
-  font-size: 1.1rem;
-  width: 80%;
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
   margin: 0 auto;
-  line-height: 1.5;
 }
 
-.linked-sections {
+/* Categories Section */
+.categories {
   padding: 50px 20px;
   text-align: center;
 }
 
-.linked-sections h2 {
+.categories-title {
+  color:#fff;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.category-links {
+.categories-grid {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .category-card {
-  width: 30%;
-  background-color: #90492f;
-  color:#fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #d1c9c9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .category-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .category-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  height: 200px;
   object-fit: cover;
 }
 
 .category-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  color:#060505;
+  margin: 15px 0;
+  font-size: 1.5rem;
 }
 
 .category-card p {
   font-size: 1rem;
-  margin-bottom: 20px;
+  color: #060505;
+  margin: 0 15px 20px;
 }
 
 .category-link {
-  padding: 10px 20px;
-  background-color: #6b2d17;
-  color: #fff;
+  display: inline-block;
+  background-color: #000000;
+  color: #feefef;
   text-decoration: none;
-  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .category-link:hover {
-  background-color: #bc4910;
+  background-color: #1b1414;
+  color: #fff;
 }
 
+/* Footer */
 .history-footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 20px;
   position: fixed;
-  width: 100%;
   bottom: 0;
+  width: 100%;
 }

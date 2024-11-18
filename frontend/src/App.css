@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 /* Global styles */
@@ -29,7 +30,7 @@ body {
 body {
     font-family: 'Arial', sans-serif;
     position: relative; /* Required for absolute positioning of the pseudo-element */
-    color:#000000
+    color:#000000;
 }
 
 body::before {
@@ -39,7 +40,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://i.pinimg.com/736x/8a/d2/e7/8ad2e768f90da7fdbf26e4497dd7993f.jpg');
+    background-image: url('https://i.pinimg.com/736x/c8/9a/6f/c89a6f1869b13978450b179d4b5c768a.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,6 +48,8 @@ body::before {
     z-index: -1; /* Ensure it is behind the content */
     opacity: 1; /* Ensure the pseudo-element is fully opaque */
 }
+
+
 
 .overlay {
     top: 0;
@@ -59,10 +62,20 @@ body::before {
 
 /* Header styles */
 header {
-    background-color: #251c1c;
+    background-image: url('https://i.pinimg.com/736x/06/9c/15/069c15e8bd54732d4f4d57be43692ab4.jpg');
+    background-position: center;
     color: #fbfbfb;
     padding: 20px;
     text-align: center;
+}
+
+header p{
+    color:#fff;
+}
+
+.hero p{
+    color:#000000;
+    font-weight: bold;
 }
 
 .search-bar {
@@ -143,7 +156,7 @@ nav a:hover {
 }
 
 /* Quizzes Section */
-.quizzes {
+/*.quizzes {
     padding: 50px 20px;
     text-align: center;
     color: #333;
@@ -232,8 +245,100 @@ nav a:hover {
     background-color: #bc4910;
 }
 
+.mystery {
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mystery img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.mystery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mystery p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.mystery button {
+    padding: 15px 30px;
+    background-color: #6b2d17;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mystery button:hover {
+    background-color: #bc4910;
+}
 
 /* Categories Section */
+
+.content-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  background: rgb(66, 23, 23);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card p {
+  padding: 0 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.card button {
+  background-color: #2e3235;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #004080;
+}
+
 .categories {
     padding: 50px 20px;
     text-align: center;
