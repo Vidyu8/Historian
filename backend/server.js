@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const Quiz = require('./models/Quiz'); // Ensure this points to the quiz model
+const quizRoutes = require('./routes/quizRoutes');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -9,9 +11,10 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());  // To parse JSON bodies
 app.use(cors()); // Allow requests from your frontend (React app)
+app.use(quizRoutes);
 
 // Connect to MongoDB (make sure to use your own connection string)
-mongoose.connect('mongodb://localhost:27017/interactiveHistoryDB', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {

@@ -1,6 +1,5 @@
 const Quiz = require('../models/Quiz');
 
-// Controller to fetch all quizzes
 const getAllQuizzes = async (req, res) => {
     try {
         const quizzes = await Quiz.find();
@@ -14,9 +13,8 @@ const getAllQuizzes = async (req, res) => {
     }
 };
 
-// Controller to fetch a specific quiz by id
 const getQuizById = async (req, res) => {
-    const { id } = req.params;  // Get the id from the URL parameters
+    const { id } = req.params; 
     try {
         const quiz = await Quiz.findById(id);
         if (!quiz) {
@@ -29,5 +27,4 @@ const getQuizById = async (req, res) => {
     }
 };
 
-// Exporting both functions
-module.exports = { getAllQuizzes, getQuizById };  // Ensure both functions are correctly exported
+module.exports = { getAllQuizzes, getQuizById }; 

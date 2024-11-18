@@ -1,237 +1,94 @@
-/* src/pages/Quiz1.css */
-
-/* General page layout */
 .quiz-container {
-    width: auto;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #cfb28c;
+    box-shadow: 0 4px 6px rgba(146, 51, 3, 0.762);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Title of the quiz */
-.quiz-title {
-    font-size: 24px;
-    font-weight: bold;
+    font-family: 'Arial', sans-serif;
     color: #333;
-    margin-bottom: 10px;
-}
-
-/* Quiz description */
-.quiz-description {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Current question styling */
-.question-text {
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* Answer options */
-.option-button {
+  }
+  
+  /* Quiz Title and Description */
+  .quiz-container h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #020e1c;
+    margin-bottom: 1rem;
+  }
+  
+  .quiz-container p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #170d0d;
+    margin-bottom: 2rem;
+  }
+  
+  /* Question Section */
+  .quiz-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .quiz-container button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #893b0b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quiz-container button:hover:not([disabled]) {
+    background-color: #c57e45;
+  }
+  
+  .quiz-container button[disabled] {
+    background-color: #893b0b;
+    cursor: not-allowed;
+  }
+  
+  /* Input for Fill-in-the-Blank Questions */
+  .quiz-container input[type="text"] {
     display: block;
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background-color: #733c14;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.option-button:hover {
-    background-color: #88611e;
-}
-
-/* Input field for fill-in-the-blank questions */
-.input-answer {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Score display */
-.score-display {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-}
-
-/* Timer display */
-.timer-display {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #040303;
-    font-weight:bold;
-}
-
-/* Progress bar */
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.progress {
-    height: 100%;
-    background-color: #17212b;
-    border-radius: 5px;
-    transition: width 0.3s;
-}
-
-/* Feedback styling */
-.feedback {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #110606;
-    font-weight: bold;
-}
-
-/* Loading and error messages */
-.loading, .error-message {
-    font-size: 16px;
-    color: #000000;
-    font-weight: bold;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .quiz-container {
-        padding: 15px;
-    }
-    
-    .quiz-title {
-        font-size: 22px;
-    }
-    
-    .quiz-description {
-        font-size: 14px;
-    }
-    
-    .question-text {
-        font-size: 16px;
-    }
-    
-    .option-button, .input-answer {
-        font-size: 14px;
-    }
-    
-    .score-display {
-        font-size: 16px;
-    }
-    
-    .timer-display {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .quiz-title {
-        font-size: 18px;
-    }
-
-    .quiz-description {
-        font-size: 12px;
-    }
-
-    .question-text {
-        font-size: 14px;
-    }
-
-    .option-button, .input-answer {
-        padding: 10px;
-        font-size: 12px;
-    }
-
-    .score-display {
-        font-size: 14px;
-    }
-
-    .timer-display {
-        font-size: 14px;
-    }
-}
-
-/* Style the navigation buttons */
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.nav-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #000000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: #0056b3;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 4px;
   }
   
-  .modal-content {
-    background-color: rgb(244, 255, 181);
-    padding: 20px;
-    width: 400px;
-    height:400px;
-    align-content: center;
-    border-radius: 8px;
-    font-size: larger;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Feedback Section */
+  .quiz-container div {
+    margin-top: 1rem;
     text-align: center;
   }
   
-  .submit-quiz-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  .quiz-container div:last-of-type {
+    margin-bottom: 1rem;
   }
   
-  .submit-quiz-button:hover {
-    background-color: #218838;
+  /* Navigation Buttons */
+  .quiz-container .quiz-container button {
+    margin-top: 1rem;
   }
-
-  .close{
-    background-color: rgb(4, 46, 60);
-    width: 60px;
-    height: 60px;
-    color:#ccc;
+  
+  .quiz-container button:nth-of-type(1) {
+    margin-right: 1rem;
   }
-
-  .close:hover{
-    background-color: #161170;
+  
+  /* Timer Section */
+  .quiz-container div:last-child {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #e74c3c;
+    font-weight: bold;
   }
+  

@@ -1,98 +1,126 @@
-/* src/pages/Myths.css */
+/* Overall page styling */
 .myths-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d7c99f;
     color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Header Styling */
 .myths-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .myths-header h1 {
-    font-size: 2.5rem;
-    color:#ffff;;
+    font-size: 3rem;
+    color: #f0f8ff;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .myths-header p {
-    font-size: 1.2rem;
-    color:#fff;
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.6;
 }
 
+/* Myth List Styling */
 .myth-list {
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-    color:#fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .myth-item {
-    background-color: #c97b5f;
-    border: 1px solid #3b1313;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    color: #211111;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 5px;
+    background-color: #51210d;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
     cursor: pointer;
-    transition: transform 0.2s;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    font-weight: 500;
 }
 
-.myth-image {
-    width: 50%; /* Make the image full width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: add rounded corners */
-    margin-bottom: 10px; /* Space between image and title */
+.myth-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Myth Title */
 .myth-title {
-    font-size: 1.5rem;
-    color: #140b0b;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #f4e3e3;
+    margin-bottom: 10px;
 }
 
-.myth-content p {
-    margin: 10px 0;
+/* Myth Content (expansion on click) */
+.myth-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
 }
 
+.myth-content p{
+    color:#e9d8d8;
+}
+
+.myth-item.expanded .myth-content {
+    max-height: 300px;
+    margin-top: 15px;
+}
+
+/* Quiz Section Styling */
 .quiz-section {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #6b2d17;
+    background-color: #633910;
     color: #fff;
-    border-radius: 5px;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .quiz-section h2 {
+    color:#e2cece;
     font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.quiz-section p{
+    color:#e2cece;
 }
 
 .quiz-section button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #f0542c;
-    color: #fff;
+    background-color: #e1a977;
+    color: rgb(97, 44, 44);
+    font-size: 1rem;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .quiz-section button:hover {
-    background-color: #bc4910;
+    background-color: #d35400;
 }
 
+/* Resources Section Styling */
 .resources {
-    margin-top: 30px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .resources h2 {
-    font-size: 1.8rem;
-    color: #6b2d17;
+    font-size: 1.75rem;
+    color: #071a2d;
+    margin-bottom: 15px;
 }
 
 .resources ul {
@@ -101,14 +129,59 @@
 }
 
 .resources li {
-    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.1rem;
 }
 
 .resources a {
-    color: #6b2d17;
+    color: #232526;
+    font-size: large;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .resources a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .myth-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quiz-section button {
+        padding: 10px 20px;
+    }
+
+    .resources ul {
+        display: block;
+    }
+
+    .resources li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .myths-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .myths-header p {
+        font-size: 1.1rem;
+    }
+
+    .myth-title {
+        font-size: 1.4rem;
+    }
+
+    .myth-item {
+        padding: 20px;
+    }
+
+    .quiz-section h2 {
+        font-size: 1.6rem;
+    }
 }

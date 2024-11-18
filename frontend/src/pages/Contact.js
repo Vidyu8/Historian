@@ -31,10 +31,8 @@ const ContactUs = () => {
             <div className="container">
                 {/* About Us Section */}
                 <div className="about-us">
-                    <h2>About Us</h2>
-                    <p>Welcome to historian, where history comes alive through research, resources, and storytelling. As historians dedicated to preserving the past, we strive to offer accurate, well-researched, and insightful perspectives on historical events, figures, and periods.</p>
-                    <p>Our mission is to make history accessible to all. Whether you're a student, educator, researcher, or history enthusiast, we offer a wealth of resources, including articles, historical documents, consultations, and lectures. We specialize in various fields of history.</p>
-                    <p>If you're interested in historical research, have a question about a specific period, or would like to collaborate on a project, we'd love to hear from you!</p>
+                    <p>Our mission is to make history accessible to all. Whether you're a student, educator, researcher, or history enthusiast.</p>
+                    <p>If you're interested in historical research, have a question about a specific period, or would like to collaborate on a project, we'd love to hear from you!!!</p>
                 </div>
 
                 <br></br>

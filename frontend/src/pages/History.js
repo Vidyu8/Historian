@@ -57,10 +57,6 @@ const History = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="history-footer">
-        <p>&copy; 2024 Interactive History. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

@@ -7,7 +7,6 @@ const mythsData = [
         title: "The Pyramids Were Built by Slaves",
         description: "Many people believe that the Egyptian pyramids were built by slaves. However, historians have found evidence that the workers were actually paid laborers and took pride in their work.",
         debunkedFact: "Archaeologists have uncovered workers' villages and burial sites near the pyramids, indicating they were respected laborers.",
-        image:"https://i.pinimg.com/736x/25/c0/5a/25c05a9fa27d6f129eed4e5da86d4166.jpg"
     },
     {
         title: "Medieval People Thought the Earth Was Flat",
@@ -26,9 +25,9 @@ const mythsData = [
         debunkedFact: "Nineteen of the accused witches were hanged and one man was crushed with stones. "
     },
     {
-        title: "Albert Einstein failed mathematics in school",
-        description: "According to Time magazine, the influential physicist laughed at this grossly inaccurate allegation",
-        debunkedFact: "Saying, \"Before I was fifteen I had mastered differential and integral calculus.\""
+        title: "The Trojan War was fought over Helen of Troy’s beauty",
+        description: "According to Greek mythology, the Trojan War began because Paris of Troy abducted Helen, the most beautiful woman in the world.",
+        debunkedFact: "Historians believe the war was likely motivated by control over trade routes and political power in the region, with Helen's story serving as a mythological embellishment."
     },
     {
         title: "\"Let them eat cake!\"",
@@ -44,6 +43,26 @@ const mythsData = [
         title: "Einstein was the father of the atomic bomb",
         description: "While Albert Einstein did contribute, to the origins of the nuclear bomb, the American secret service eventually dismissed him from the project.",
         debunkedFact: "Physicist Julius Robert Oppenheimer, considered the true father of the atomic bomb, directed the Manhattan Project from 1942 to 1945."
+    },
+    {
+        title: "Magellan circumnavigated the globe",
+        description: "Ferdinand Magellan is often credited with being the first to sail around the world.",
+        debunkedFact: "Magellan initiated the expedition but was killed in the Philippines. The journey was completed by Juan Sebastián Elcano, who led the remaining crew back to Spain."
+    },
+    {
+        title: "The Boston Tea Party protestors dressed as Native Americans",
+        description: "It's commonly believed that all participants wore full Native American attire to disguise themselves.",
+        debunkedFact: "Only some participants used elements of Native American attire, and it was more symbolic than a serious attempt to mimic Native Americans."
+    },
+    {
+        title: "The Spanish Inquisition executed millions of people",
+        description: "The Spanish Inquisition is often thought to have resulted in millions of executions.",
+        debunkedFact: "Historical evidence shows that 3,000–5,000 people were executed during the Inquisition, far fewer than commonly believed."
+    },
+    {
+        title: "Stone Age people were primitive and unsophisticated",
+        description: "The Stone Age is often associated with basic tools and a lack of societal structure.",
+        debunkedFact: "Stone Age people developed intricate tools, created art, and formed complex societal structures, demonstrating advanced adaptability and intelligence."
     }
 ];
 
@@ -64,7 +83,6 @@ const Myths = () => {
             <section className="myth-list">
             {mythsData.map((myth, index) => (
                 <div key={index} className="myth-item" onClick={() => toggleExpand(index)}>
-                <img src={myth.image} alt={myth.title} className="myth-image" />
                 <h2 className="myth-title">
                     {myth.title}
                 </h2>

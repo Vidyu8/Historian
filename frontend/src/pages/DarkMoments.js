@@ -11,10 +11,10 @@ const DarkHistoryPage = () => {
 
     return (
         <div className="dark-history-container">
-            <br />
-            <br />
-            <h1>Dark History: Tales of Tragedy, Beauty, and Madness</h1>
-            <p>Explore the darkest and most bizarre moments in human history.</p>
+            <header>
+                <h1>Dark History: Tales of Tragedy, Beauty, and Madness</h1>
+                <p>Explore the darkest and most bizarre moments in human history.</p>
+            </header>
             <br></br>
             <br></br>
             <br></br>

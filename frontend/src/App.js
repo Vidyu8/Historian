@@ -31,7 +31,7 @@ function App() {
                 <Route path="/quizzes" element={<Quizzes />} />
                 <Route path="/quiz/:id" element={<Quiz />} />
                 <Route path="/darkhistory" element={<DarkMoments />} />
-                <Route path="/mystery" element={<Mystery />} />
+                <Route path="/mysteries" element={<Mystery />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>

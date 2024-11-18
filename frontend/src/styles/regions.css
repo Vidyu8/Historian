@@ -3,25 +3,25 @@
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    max-width:1200px;
     padding-left:0px;
+    margin: auto;
 }
 #map-container img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    display:block;
 }
 
 #map-container .heading {
     text-align: center;
-    color: #333;
-    font-size: 50px;
+    color: #f0eaea;
     font-weight: bold;
 }
 #map-container .subheading {
     text-align: center;
-    color: #333;
-    font-size: 30px;
+    color: #f6f2f2;
     font-weight: bold; /* Adds space below the heading */
 }
 /* The circle representing a country on the map */
@@ -32,6 +32,7 @@
     background-color: red;
     border-radius: 50%;
     cursor: pointer; 
+    transform: translate(-50%, -50%);
 }
 
 /* Styling for the information box */

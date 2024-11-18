@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/regions.css';  
+import '../styles/regions.css';  // Assuming you have this file for your CSS styles
 
 const InteractiveWorldMap = () => {
     const countryData = {
@@ -703,8 +703,10 @@ const InteractiveWorldMap = () => {
     return (
         
         <div id="map-container">
+		<header>
           <h1 className='heading'>Discover the history of the country</h1>
-          <h2 className='subheading'>Click on the red dot to explore the fascinating history of the world.</h2>
+          <h2 className='subheading'>Click on the red dot to explore the fascinating history of this nation.</h2>
+		</header>
             {/* World Map Image */}
             <img 
                 src="https://img.freepik.com/premium-photo/map-world-is-made-wood-has-word-world-it_786255-8967.jpg" 
@@ -857,4 +859,3 @@ const InteractiveWorldMap = () => {
 };
 
 export default InteractiveWorldMap;
-
