@@ -1,194 +1,415 @@
-/* Reset styles */
 * {
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.search-form {
+  display:contents; /* Align search bar and button in a row */
+  align-items: center; /* Vertically center the items */
+  gap: 10px; /* Space between the input and the button */
+}
+
+.search-text {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #333; /* Border style for the input */
+  border-radius: 4px; /* Optional: rounded corners */
+  width: 250px; /* Make the input shorter */
+}
+
+.search-text:focus {
+  outline: none; /* Remove the default outline when focused */
+}
+
+.search-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #333; /* Button background color */
+  color: white;
+  border: 2px solid #333; /* Border for the button */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+.search-button:focus {
+  outline: none; /* Remove focus outline for the button */
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  position: relative; /* Required for absolute positioning of the pseudo-element */
+  color:#000000;
+}
+
+body::before {
+  content: '';
+  position: fixed;/* Use fixed to keep it in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.pinimg.com/736x/c8/9a/6f/c89a6f1869b13978450b179d4b5c768a.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(1px); /* Adjust the blur amount here */
+  z-index: -1; /* Ensure it is behind the content */
+  opacity: 1; /* Ensure the pseudo-element is fully opaque */
+}
+
+
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: Use an overlay for additional effect */
+  z-index: -1; /* Ensure it is behind the content */
+}
+
+/* Header styles */
+header {
+  background-image: url('https://i.pinimg.com/736x/06/9c/15/069c15e8bd54732d4f4d57be43692ab4.jpg');
+  background-position: center;
+  color: #fbfbfb;
+  padding: 20px;
+  text-align: center;
+}
+
+header p{
+  color:#fff;
+}
+
+.hero p{
+  color:#000000;
+  font-weight: bold;
+}
+
+.search-bar {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e6ae2c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+.search-bar button:hover {
+  background-color: #892b14;
+}
+
+/* Navbar styles */
+nav {
+  background-color: #251c1c;
+  text-align: center;
+  padding: 15px 0;
+}
+
+nav a {
+  color: #fff;
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #555;
+  transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  color: #0c0404;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 15px 30px;
+  background-color: #6b2d17;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #f0542c;
+}
+
+/* Quizzes Section */
+/*.quizzes {
+  padding: 50px 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
-  body {
-    font-family: 'Arial', sans-serif;
-    position: relative; /* Required for absolute positioning of the pseudo-element */
-    color: #000000;
-    overflow: auto;
-  }
-  
-  body::before {
-    content: '';
-    position: fixed; /* Use fixed to keep it in place while scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://i.pinimg.com/736x/c8/9a/6f/c89a6f1869b13978450b179d4b5c768a.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: blur(2px); /* Adjust the blur amount here */
-    z-index: -1; /* Ensure it is behind the content */
-    opacity: 1; /* Ensure the pseudo-element is fully opaque */
-  }
-  
-  .overlay {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-  }
-  
-  /* Header styles */
-  header {
-    background-image: url('https://i.pinimg.com/736x/06/9c/15/069c15e8bd54732d4f4d57be43692ab4.jpg');
-    background-position: center;
-    color: #fbfbfb;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header p {
-    color: #fff;
-  }
-  
-  /* Search Bar styles within Header */
-  header .search-bar {
-    margin-top: 15px;
-    text-align: center;
-  }
-  
-  header .search-bar input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    width: 50%; /* Adjust width to be more centered */
-  }
-  
-  header .search-bar button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #e6ae2c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: -5px;
-  }
-  
-  header .search-bar button:hover {
-    background-color: #892b14;
-  }
-  
-  /* Navbar styles */
-  nav {
-    background-color: #251c1c;
-    text-align: center;
-    padding: 15px 0;
-  }
-  
-  nav a {
-    color: #fff;
-    padding: 0 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    background-color: #555;
-    transition: 0.3s;
-  }
-  
-  /* Hero Section */
-  .hero {
-    padding: 100px 20px;
-    text-align: center;
-    color: #0c0404;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 1.5rem;
-    color: #000000;
-    margin-bottom: 30px;
-  }
-  
-  .hero button {
-    padding: 15px 30px;
-    background-color: #6b2d17;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .hero button:hover {
-    background-color: #f0542c;
-  }
-  
-  /* Content grid for cards */
-  .content-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .card {
-    width: 300px;
-    background: rgb(66, 23, 23);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: auto;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card h3 {
-    margin: 20px 0 10px;
-    font-size: 1.5rem;
-    color: white;
-  }
-  
-  .card p {
-    padding: 0 10px 20px;
-    font-size: 1rem;
-    color: #ffffff;
-  }
-  
-  .card button {
-    background-color: #2e3235;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-  }
-  
-  .card button:hover {
-    background-color: #004080;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #0e0303;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-  }
-  
-  footer p {
-    color: #fff;
-  }
-  
+}
+
+.quizzes img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.quizzes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.quizzes p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.quizzes button {
+  padding: 15px 30px;
+  background-color: #6b2d17;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quizzes button:hover {
+  background-color: #bc4910;
+}
+
+.darkhistory {
+  padding: 50px 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkhistory img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.darkhistory h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.darkhistory p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.darkhistory button {
+  padding: 15px 30px;
+  background-color: #6b2d17;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.darkhistory button:hover {
+  background-color: #bc4910;
+}
+
+.mystery {
+  padding: 50px 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mystery img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.mystery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.mystery p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.mystery button {
+  padding: 15px 30px;
+  background-color: #6b2d17;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mystery button:hover {
+  background-color: #bc4910;
+}
+
+/* Categories Section */
+
+.content-grid {
+display: flex;
+gap: 20px;
+justify-content: center;
+padding: 20px;
+}
+
+.card {
+width: 300px;
+background: rgb(66, 23, 23);
+border: 1px solid #ddd;
+border-radius: 10px;
+overflow: hidden;
+text-align: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card h3 {
+margin: 20px 0 10px;
+font-size: 1.5rem;
+color: white;
+}
+
+.card p {
+padding: 0 10px 20px;
+font-size: 1rem;
+color: #ffffff;
+}
+
+.card button {
+background-color: #2e3235;
+color: white;
+border: none;
+padding: 10px 20px;
+margin: 10px 0;
+cursor: pointer;
+}
+
+.card button:hover {
+background-color: #004080;
+}
+
+.categories {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  width: 30%;
+  background-color: #742e14;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.category-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.category-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.category-card button {
+  padding: 10px 20px;
+  background-color: #768046;
+  color: #211818;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.category-card button:hover {
+  background-color: #2a4a31;
+}
+
+/* Footer styles */
+footer {
+  background-color: #0e0303;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
