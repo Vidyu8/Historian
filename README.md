@@ -1,4 +1,5 @@
-Historian is a Interactive history website where we have tried to make the process of learning history more reliable and engaging through myth debunking, diversity and quizzing features
+Historian. is a Interactive history website where we have tried to make the process of learning history more reliable and engaging through myth debunking, diversity and quizzing features.
+![image](https://github.com/user-attachments/assets/55fab613-d2de-427f-881d-f6574b59f265)
 
 ![image](https://github.com/user-attachments/assets/f82f36a1-6613-40eb-b6d6-a7a9e6394d98)
 
