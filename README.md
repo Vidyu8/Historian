@@ -1,3 +1,6 @@
+Historian is a Interactive history website where we have tried to make the process of learning history more reliable and engaging through myth debunking, diversity and quizzing features
+
+![image](https://github.com/user-attachments/assets/f82f36a1-6613-40eb-b6d6-a7a9e6394d98)
 
 ## Directory Structure:
 
@@ -45,10 +48,4 @@
   - **`index.js`**: The entry point for the React app, where the app is rendered into the DOM.
 - **`package.json`**: Contains project information, dependencies, and scripts for running and building the app.
 
-## Setup Instructions
-
-1. Clone the repository to your local machine.
-2. Navigate to the `frontend/` directory.
-3. Run `npm install` to install the necessary dependencies.
-4. Run `npm start` to start the development server.
 
